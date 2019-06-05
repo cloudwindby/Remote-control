@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>recourse/cmd.png</file>
+        <file>recourse/file.png</file>
+        <file>recourse/screen.png</file>
+        <file>recourse/process.png</file>
+        <file>recourse/about.png</file>
+        <file>recourse/builder.png</file>
+        <file>recourse/exit.png</file>
+        <file>recourse/start.png</file>
+        <file>recourse/stop.png</file>
+        <file>recourse/toy.png</file>
+    </qresource>
+</RCC>

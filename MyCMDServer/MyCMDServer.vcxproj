@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{698FD104-3A45-3DC4-AA80-8E4495719741}</ProjectGuid>
+    <RootNamespace>MyCMDServer</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>MyCMDServer</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>MyCMDServer</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MyCMDServer</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MyCMDServer</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;C:\Qt\5.11.2\msvc2015\include;C:\Qt\5.11.2\msvc2015\include\QtWidgets;C:\Qt\5.11.2\msvc2015\include\QtGui;C:\Qt\5.11.2\msvc2015\include\QtANGLE;C:\Qt\5.11.2\msvc2015\include\QtNetwork;C:\Qt\5.11.2\msvc2015\include\QtCore;release;.;\include;C:\Qt\5.11.2\msvc2015\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>C:\Qt\5.11.2\msvc2015\lib\qtmain.lib;shell32.lib;ws2_32.lib;..\common\zlibstat.lib;C:\Qt\5.11.2\msvc2015\lib\Qt5Widgets.lib;C:\Qt\5.11.2\msvc2015\lib\Qt5Gui.lib;C:\Qt\5.11.2\msvc2015\lib\Qt5Network.lib;C:\Qt\5.11.2\msvc2015\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Qt\5.11.2\msvc2015\lib;C:\opensslx86\lib;C:\Utils\my_sql\mysql-5.6.11-win32\lib;C:\Utils\postgresqlx86\pgsql\lib;..\common;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\MyCMDServer.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;C:\Qt\5.11.2\msvc2015\include;C:\Qt\5.11.2\msvc2015\include\QtWidgets;C:\Qt\5.11.2\msvc2015\include\QtGui;C:\Qt\5.11.2\msvc2015\include\QtANGLE;C:\Qt\5.11.2\msvc2015\include\QtNetwork;C:\Qt\5.11.2\msvc2015\include\QtCore;debug;.;\include;C:\Qt\5.11.2\msvc2015\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;QT_DEPRECATED_WARNINGS;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>C:\Qt\5.11.2\msvc2015\lib\qtmaind.lib;shell32.lib;ws2_32.lib;..\common\zlibstat.lib;C:\Qt\5.11.2\msvc2015\lib\Qt5Widgetsd.lib;C:\Qt\5.11.2\msvc2015\lib\Qt5Guid.lib;C:\Qt\5.11.2\msvc2015\lib\Qt5Networkd.lib;C:\Qt\5.11.2\msvc2015\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Qt\5.11.2\msvc2015\lib;C:\opensslx86\lib;C:\Utils\my_sql\mysql-5.6.11-win32\lib;C:\Utils\postgresqlx86\pgsql\lib;..\common;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\MyCMDServer.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;QT_DEPRECATED_WARNINGS;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="acceptthread.cpp" />
+    <ClCompile Include="cmddialog.cpp" />
+    <ClCompile Include="filedialog.cpp" />
+    <ClCompile Include="iocpserver.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="processdialog.cpp" />
+    <ClCompile Include="recvthread.cpp" />
+    <ClCompile Include="screendialog.cpp" />
+    <ClCompile Include="tcpserver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="acceptthread.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">acceptthread.h;release\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include acceptthread.h -o release\moc_acceptthread.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC acceptthread.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_acceptthread.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">acceptthread.h;debug\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/debug/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include acceptthread.h -o debug\moc_acceptthread.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC acceptthread.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_acceptthread.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="cmddialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cmddialog.h;release\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include cmddialog.h -o release\moc_cmddialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC cmddialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_cmddialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cmddialog.h;debug\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/debug/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include cmddialog.h -o debug\moc_cmddialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC cmddialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_cmddialog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="filedialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">filedialog.h;release\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include filedialog.h -o release\moc_filedialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC filedialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_filedialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">filedialog.h;debug\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/debug/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include filedialog.h -o debug\moc_filedialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC filedialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_filedialog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="iocpserver.h" />
+    <ClInclude Include="..\common\macro.h" />
+    <CustomBuild Include="mainwindow.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mainwindow.h;release\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include mainwindow.h -o release\moc_mainwindow.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC mainwindow.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_mainwindow.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mainwindow.h;debug\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/debug/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include mainwindow.h -o debug\moc_mainwindow.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC mainwindow.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_mainwindow.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="processdialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">processdialog.h;release\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include processdialog.h -o release\moc_processdialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC processdialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_processdialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">processdialog.h;debug\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/debug/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include processdialog.h -o debug\moc_processdialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC processdialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_processdialog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="recvthread.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">recvthread.h;release\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include recvthread.h -o release\moc_recvthread.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC recvthread.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_recvthread.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">recvthread.h;debug\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/debug/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include recvthread.h -o debug\moc_recvthread.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC recvthread.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_recvthread.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="screendialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">screendialog.h;release\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include screendialog.h -o release\moc_screendialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC screendialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_screendialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">screendialog.h;debug\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/debug/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include screendialog.h -o debug\moc_screendialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC screendialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_screendialog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="tcpserver.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tcpserver.h;release\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/release/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include tcpserver.h -o release\moc_tcpserver.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC tcpserver.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_tcpserver.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tcpserver.h;debug\moc_predefs.h;C:\Qt\5.11.2\msvc2015\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/Users/Administrator/Desktop/c/My/QT/MyCMDServer/debug/moc_predefs.h -IC:/Qt/5.11.2/msvc2015/mkspecs/win32-msvc -IC:/Users/Administrator/Desktop/c/My/QT/MyCMDServer -IC:/Qt/5.11.2/msvc2015/include -IC:/Qt/5.11.2/msvc2015/include/QtWidgets -IC:/Qt/5.11.2/msvc2015/include/QtGui -IC:/Qt/5.11.2/msvc2015/include/QtANGLE -IC:/Qt/5.11.2/msvc2015/include/QtNetwork -IC:/Qt/5.11.2/msvc2015/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" -IC:\Qt\5.11.2\msvc2015\include tcpserver.h -o debug\moc_tcpserver.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC tcpserver.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_tcpserver.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc_acceptthread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_acceptthread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_cmddialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_cmddialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_filedialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_filedialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_mainwindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_mainwindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl -BxC:\Qt\5.11.2\msvc2015\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\5.11.2\msvc2015\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl -BxC:\Qt\5.11.2\msvc2015\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\5.11.2\msvc2015\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <ClCompile Include="debug\moc_processdialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_processdialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_recvthread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_recvthread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_screendialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_screendialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_tcpserver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_tcpserver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\qrc_resource.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\qrc_resource.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClInclude Include="ui_cmddialog.h" />
+    <ClInclude Include="ui_filedialog.h" />
+    <ClInclude Include="ui_mainwindow.h" />
+    <ClInclude Include="ui_processdialog.h" />
+    <ClInclude Include="ui_screendialog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="cmddialog.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cmddialog.ui;C:\Qt\5.11.2\msvc2015\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\uic.exe cmddialog.ui -o ui_cmddialog.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC cmddialog.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_cmddialog.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cmddialog.ui;C:\Qt\5.11.2\msvc2015\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\uic.exe cmddialog.ui -o ui_cmddialog.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC cmddialog.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_cmddialog.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="filedialog.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">filedialog.ui;C:\Qt\5.11.2\msvc2015\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\uic.exe filedialog.ui -o ui_filedialog.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC filedialog.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_filedialog.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">filedialog.ui;C:\Qt\5.11.2\msvc2015\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\uic.exe filedialog.ui -o ui_filedialog.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC filedialog.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_filedialog.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="mainwindow.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mainwindow.ui;C:\Qt\5.11.2\msvc2015\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\uic.exe mainwindow.ui -o ui_mainwindow.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC mainwindow.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_mainwindow.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mainwindow.ui;C:\Qt\5.11.2\msvc2015\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\uic.exe mainwindow.ui -o ui_mainwindow.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC mainwindow.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_mainwindow.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="processdialog.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">processdialog.ui;C:\Qt\5.11.2\msvc2015\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\uic.exe processdialog.ui -o ui_processdialog.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC processdialog.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_processdialog.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">processdialog.ui;C:\Qt\5.11.2\msvc2015\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\uic.exe processdialog.ui -o ui_processdialog.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC processdialog.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_processdialog.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="screendialog.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">screendialog.ui;C:\Qt\5.11.2\msvc2015\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\uic.exe screendialog.ui -o ui_screendialog.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC screendialog.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_screendialog.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">screendialog.ui;C:\Qt\5.11.2\msvc2015\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\uic.exe screendialog.ui -o ui_screendialog.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC screendialog.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_screendialog.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="recourse\about.png" />
+    <None Include="recourse\builder.png" />
+    <None Include="recourse\cmd.png" />
+    <None Include="recourse\exit.png" />
+    <None Include="recourse\file.png" />
+    <None Include="recourse\process.png" />
+    <CustomBuild Include="resource.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">resource.qrc;C:\Qt\5.11.2\msvc2015\bin\rcc.exe;recourse\stop.png;recourse\builder.png;recourse\file.png;recourse\screen.png;recourse\cmd.png;recourse\start.png;recourse\about.png;recourse\exit.png;recourse\toy.png;recourse\process.png;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\5.11.2\msvc2015\bin\rcc.exe -name resource resource.qrc -o release\qrc_resource.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">RCC resource.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\qrc_resource.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">resource.qrc;C:\Qt\5.11.2\msvc2015\bin\rcc.exe;recourse\stop.png;recourse\builder.png;recourse\file.png;recourse\screen.png;recourse\cmd.png;recourse\start.png;recourse\about.png;recourse\exit.png;recourse\toy.png;recourse\process.png;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\5.11.2\msvc2015\bin\rcc.exe -name resource resource.qrc -o debug\qrc_resource.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">RCC resource.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\qrc_resource.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="recourse\screen.png" />
+    <None Include="recourse\start.png" />
+    <None Include="recourse\stop.png" />
+    <None Include="recourse\toy.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ItemGroup>
+    <ResourceCompile Include="myicon.rc" />
+  </ItemGroup>
+</Project>
